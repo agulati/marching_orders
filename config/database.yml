@@ -1,0 +1,16 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: marching_orders_development
+
+test:
+  <<: *default
+  database: marching_orders_test
+
+production:
+  <<: *default
+  database: marching_orders
